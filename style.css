@@ -419,30 +419,7 @@ w */
 
 
 
-/* hello
-grs
-erg
-rg
-rg
-erg
-erg
-erg
-er
-ger
-g
-erg
-erg
-er
-g
-erg
-erg
-erg
-re
-gre
-ger
-g
-erg
-*/
+
 
 
 @media(max-width:1280px) {
@@ -500,9 +477,9 @@ erg
         font-size: 1.5rem;
     }
 
-    .info-box i {
+    /* .info-box i {
         display: none;
-    }
+    } */
 
     .grid {
         grid-template-columns: repeat(1, 1fr);
