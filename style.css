@@ -464,6 +464,8 @@ w */
         display: none;
     }
 
+
+
     .about-container {
         flex-direction: column;
     }
@@ -516,7 +518,14 @@ w */
     }
 
 
+    .info-box h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
 
+    .info-box span {
+        font-size: 2rem;
+    }
 
     .nav-links li {
         margin-top: 1.5rem;
