@@ -149,6 +149,9 @@ section {
 .btn-group {
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    /* Centers buttons horizontally */
+    align-items: center;
 }
 
 .btn {
@@ -199,7 +202,7 @@ section {
 }
 
 .experience img {
-    width: 20vw;
+    width: 18vw;
     border-radius: 3rem;
 
 }
@@ -314,6 +317,101 @@ section {
 }
 
 
+/* 
+hiwef
+ewf
+wef
+ewf
+ew
+fwe
+f
+e
+fw
+e
+wef */
+/* General styles for the carousel */
+.carousel-container {
+    position: relative;
+    width: 70%;
+    /* Keep a reasonable width */
+    max-width: 1200px;
+    /* Optional: Set a max width */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    margin: 1rem;
+    flex: 0 0 50%;
+    /* Default: two items per slide (on large screens) */
+    box-sizing: border-box;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3rem;
+}
+
+/* Images inside the carousel */
+.carousel img {
+    width: 100%;
+    /* Ensures images scale with their container */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Navigation buttons */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Query for Small Screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%;
+        /* Show one item per slide on mobile */
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-item {
+        flex: 0 0 50%;
+        /* Show two items per slide on large screens */
+    }
+}
+
+
+
 .input-box {
     display: flex;
     flex-direction: column;
@@ -378,14 +476,17 @@ footer ul li a {
 }
 
 
-/* ioefeen
-efw
-fw
-fw
-f
-wf
-f
-w */
+/* .inner{
+    padding-top: 20px;
+} */
+
+.skills-header {
+    text-align: center;
+    color: black;
+    padding: 1rem;
+    position: relative;
+}
+
 
 
 
@@ -417,12 +518,62 @@ w */
 }
 
 
+/* hwieeeeeeeeeeeeeeeeeeeeeeeeeeeee */
 
+.Skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 items per row on large screens */
+    gap: 2rem;
+}
+
+.Skills-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    /* Slightly less rounded */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Separate transition for transform and color */
+}
+
+.Skills-card:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    /* Subtler hover effect */
+}
+
+.Skills-card img {
+    width: 8vh;
+    /* Adjusted size for consistency */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 1rem;
+}
+
+.Skills-card h3 {
+    font-size: 1.5rem;
+    /* Slightly smaller for better balance */
+    font-weight: 500;
+}
 
 
 
 
 @media(max-width:1280px) {
+
+    .Skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 items per row */
+    }
+
     header {
         padding: 1rem 2rem;
         gap: 2rem;
@@ -447,6 +598,11 @@ w */
 
     .input-box i {
         font-size: 2.5rem;
+    }
+
+    .experience img {
+        display: none;
+        /* Hide image on mobile */
     }
 }
 
@@ -489,6 +645,11 @@ w */
 
     .experience-info img {
         width: 70vw;
+    }
+
+    .experience img {
+        display: none;
+        /* Hide image on mobile */
     }
 }
 
@@ -560,5 +721,34 @@ w */
 
     footer ul {
         gap: 1rem;
+    }
+
+    /* 
+     */
+
+
+    .Skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Display 2 items per row */
+    }
+
+    .Skills-card {
+        padding: 1rem;
+        /* Reduce padding for smaller screens */
+    }
+
+    .Skills-card img {
+        width: 6vh;
+        /* Smaller icon size on mobile */
+    }
+
+    .Skills-card h3 {
+        font-size: 1.2rem;
+        /* Adjust text size for mobile */
+    }
+
+    .experience img {
+        display: none;
+        /* Hide image on mobile */
     }
 }
