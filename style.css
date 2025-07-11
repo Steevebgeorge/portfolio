@@ -268,68 +268,10 @@ section {
 
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-
-}
-
-.project-card {
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
-    border: 2px solid black;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    background-color: black;
-    color: white;
-    transform: translateY(-10px)scale(1.02);
-}
-
-.project-card img {
-    width: 20vh;
-    border-radius: 1rem;
-}
-
-.project-card:hover .btn {
-    border: 2px solid white;
-    color: white;
-}
-
-.project-card:hover .btn:hover {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
-}
-
-.project-card h3 {
-    font-size: 2rem;
-    font-weight: 500;
-}
 
 
-/* 
-hiwef
-ewf
-wef
-ewf
-ew
-fwe
-f
-e
-fw
-e
-wef */
-/* General styles for the carousel */
+
+
 .carousel-container {
     position: relative;
     width: 70%;
@@ -776,3 +718,94 @@ footer ul li a {
         /* Hide image on mobile */
     }
 }
+
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card .btn {
+    border: 2px solid black;
+    color: black;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    text-wrap: nowrap;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.project-card:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.03);
+}
+
+.project-card:hover .btn {
+    border-color: white;
+    color: white;
+}
+
+.project-card:hover .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.toggle-btn-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.toggle-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
